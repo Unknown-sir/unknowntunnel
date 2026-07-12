@@ -1,0 +1,39 @@
+{
+  "node_id": "iran",
+  "peer_id": "kharej",
+  "role": "client",
+  "auth": {
+    "secret_file": "/etc/unknowntunnel/secret.key"
+  },
+  "transport": {
+    "mode": "both",
+    "prefer": "udp",
+    "listen_tcp": "",
+    "listen_udp": "",
+    "connect_tcp": "KHAREJ_PUBLIC_IP:8443",
+    "connect_udp": "KHAREJ_PUBLIC_IP:8443"
+  },
+  "l3": {
+    "enabled": true,
+    "interface": "utun0",
+    "address": "10.77.0.1/30",
+    "mtu": 1200,
+    "routes": [],
+    "allow_protocols": ["tcp", "udp"]
+  },
+  "services": {},
+  "forwards": [
+    {
+      "name": "https-in",
+      "protocol": "tcp",
+      "listen": "0.0.0.0:443",
+      "service": "web-https"
+    },
+    {
+      "name": "dns-in",
+      "protocol": "udp",
+      "listen": "0.0.0.0:5353",
+      "service": "dns-udp"
+    }
+  ]
+}
