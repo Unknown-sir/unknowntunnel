@@ -166,7 +166,7 @@ echo tun | sudo tee /etc/modules-load.d/tun.conf
 
 ```bash
 git clone https://github.com/Unknown-sir/unknowntunnel.git
-cd Unknowntunnel
+cd unknowntunnel
 sudo ./scripts/install.sh
 ```
 
