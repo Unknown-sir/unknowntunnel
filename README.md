@@ -165,7 +165,7 @@ echo tun | sudo tee /etc/modules-load.d/tun.conf
 فایل پروژه را استخراج کنید و وارد پوشه شوید:
 
 ```bash
-unzip Unknowntunnel-0.2.0.zip
+git clone https://github.com/Unknown-sir/unknowntunnel.git
 cd Unknowntunnel
 sudo ./scripts/install.sh
 ```
